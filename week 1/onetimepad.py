@@ -1,11 +1,7 @@
-import onetimepad
 
-stringToBeEnvrypted = 'wiki'
-res = ''.join(format(ord(i), 'b') for i in stringToBeEnvrypted) 
-print(res)
-key ='11110011'
-seret = onetimepad.encrypt(res, key)
-#encryptedBinary = ''.join(format(ord(i), 'b') for i in seret)
-print(seret)
-decryptedText= onetimepad.decrypt(seret, key)
-print(decryptedText)
+hex_string = "0x616263"[2:]
+bytes_object = bytes.fromhex(hex_string)
+ascii_string = bytes_object.decode("ASCII")
+print(ascii_string)
+
+       
